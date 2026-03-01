@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:lviv-invest.com)",
+      "Bash(php -v:*)",
+      "Bash(where:*)",
+      "Bash(dir \"C:\\\\xampp\\\\php\\\\php.exe\")",
+      "Bash(dir \"C:\\\\laragon\\\\bin\\\\php\\\\*\\\\php.exe\")",
+      "Bash(dir \"C:\\\\wamp64\\\\bin\\\\php\\\\*\\\\php.exe\")",
+      "Bash(powershell -Command \"New-Item -ItemType Directory -Force -Path ''C:\\\\php''\")",
+      "Bash(powershell -Command:*)",
+      "WebFetch(domain:windows.php.net)",
+      "Bash(copy \"C:\\\\php\\\\php.ini-development\" \"C:\\\\php\\\\php.ini\")",
+      "Bash(cmd /c \"setx PATH \"\"%PATH%;C:\\\\php\"\"\")",
+      "Bash(C:phpphp.exe -v)",
+      "Bash(cmd /c \"C:\\\\php\\\\php.exe -v\")"
+    ]
+  }
+}
