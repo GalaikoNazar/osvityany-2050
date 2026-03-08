@@ -453,4 +453,43 @@ document.querySelectorAll('.ticket__amount').forEach(function(el) {
     document.head.appendChild(style);
 })();
 
+// ==========================================
+// Hide package selector for speaker/partner forms
+// ==========================================
+(function() {
+    var hidePackageButtons = document.querySelectorAll('[data-hide-package="true"]');
+    var packageGroup = document.querySelector('#packageSelector')?.closest('.form-group');
+    var formTitle = document.querySelector('.form-section__info .section-title');
+    var originalTitle = formTitle ? formTitle.innerHTML : '';
+
+    hidePackageButtons.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            if (packageGroup) {
+                packageGroup.style.display = 'none';
+            }
+
+            // Update form title based on type
+            var formType = btn.getAttribute('data-form-type');
+            if (formTitle && formType === 'speaker') {
+                formTitle.innerHTML = 'Стати<br><span class="text-gradient-animated">доповідачем</span>';
+            } else if (formTitle && formType === 'partner') {
+                formTitle.innerHTML = 'Запропонувати<br><span class="text-gradient-animated">партнерство</span>';
+            }
+        });
+    });
+
+    // Show package selector when clicking regular registration buttons
+    var regularButtons = document.querySelectorAll('a[href="#form"]:not([data-hide-package])');
+    regularButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            if (packageGroup) {
+                packageGroup.style.display = '';
+            }
+            if (formTitle) {
+                formTitle.innerHTML = originalTitle;
+            }
+        });
+    });
+})();
+
 console.log('Script loaded successfully. Timer should be running.');
