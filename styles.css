@@ -353,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo__text {
     font-family: var(--font-heading);
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 800;
     color: #fff;
 }
@@ -386,8 +386,7 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.header__actions { display: flex; align-items: center; gap: 8px; }
-.header__actions .btn { padding: 8px 12px; font-size: 11px; white-space: nowrap; }
+.header__actions { display: flex; align-items: center; gap: 16px; }
 
 .burger {
     display: none;
@@ -529,6 +528,10 @@ h1, h2, h3, h4, h5, h6 {
 .hero__buttons {
     display: flex;
     gap: 16px;
+    margin-bottom: 24px;
+}
+
+.hero__buttons--secondary {
     margin-bottom: 50px;
 }
 
