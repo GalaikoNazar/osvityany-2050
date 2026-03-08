@@ -1,24 +1,24 @@
 /* ==========================================
-   CREATIVE V2 - Purple/Pink Theme
+   CREATIVE V2 - Navy Blue / Terracotta Theme
    Fonts: Sora + Plus Jakarta Sans
    ========================================== */
 
 :root {
-    --color-bg: #030014;
-    --color-bg-light: #0a0520;
+    --color-bg: #0a1628;
+    --color-bg-light: #0d1b2a;
     --color-bg-card: rgba(255, 255, 255, 0.02);
     --color-text: #ffffff;
-    --color-text-muted: #a78bfa;
-    --color-primary: #a855f7;
-    --color-secondary: #ec4899;
-    --color-cyan: #06b6d4;
-    --color-accent-gradient: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
-    --color-glow: rgba(168, 85, 247, 0.5);
-    --color-border: rgba(168, 85, 247, 0.3);
+    --color-text-muted: #c4a39a;
+    --color-primary: #a0564a;
+    --color-secondary: #c27a6a;
+    --color-cyan: #c4a39a;
+    --color-accent-gradient: linear-gradient(135deg, #8b4a3c 0%, #c27a6a 100%);
+    --color-glow: rgba(160, 86, 74, 0.5);
+    --color-border: rgba(160, 86, 74, 0.3);
     --font-heading: 'Sora', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
-    --glass-bg: rgba(10, 5, 30, 0.7);
-    --glass-border: rgba(168, 85, 247, 0.2);
+    --glass-bg: rgba(10, 22, 40, 0.7);
+    --glass-border: rgba(160, 86, 74, 0.2);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --clip-corner: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
     --clip-corner-sm: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
@@ -50,9 +50,9 @@ body {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(168, 85, 247, 0.3), transparent),
-        radial-gradient(ellipse 60% 50% at 100% 50%, rgba(236, 72, 153, 0.15), transparent),
-        radial-gradient(ellipse 60% 50% at 0% 50%, rgba(168, 85, 247, 0.15), transparent);
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(160, 86, 74, 0.3), transparent),
+        radial-gradient(ellipse 60% 50% at 100% 50%, rgba(194, 122, 106, 0.15), transparent),
+        radial-gradient(ellipse 60% 50% at 0% 50%, rgba(160, 86, 74, 0.15), transparent);
 }
 
 .bg-orbs .orb {
@@ -64,13 +64,13 @@ body {
 
 .orb--1 {
     width: 600px; height: 600px;
-    background: rgba(168, 85, 247, 0.3);
+    background: rgba(160, 86, 74, 0.3);
     top: -200px; left: -200px;
 }
 
 .orb--2 {
     width: 400px; height: 400px;
-    background: rgba(236, 72, 153, 0.25);
+    background: rgba(194, 122, 106, 0.25);
     top: 50%; right: -100px;
     animation-delay: -7s;
 }
@@ -140,8 +140,8 @@ body {
         0deg,
         transparent,
         transparent 2px,
-        rgba(168, 85, 247, 0.03) 2px,
-        rgba(168, 85, 247, 0.03) 4px
+        rgba(160, 86, 74, 0.03) 2px,
+        rgba(160, 86, 74, 0.03) 4px
     );
     pointer-events: none;
     z-index: 1;
@@ -150,8 +150,8 @@ body {
 /* Cyber Grid */
 .cyber-grid {
     background-image:
-        linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+        linear-gradient(rgba(160, 86, 74, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(160, 86, 74, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
 }
 
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient-animated {
-    background: linear-gradient(90deg, #a855f7, #ec4899, #f472b6, #ec4899, #a855f7);
+    background: linear-gradient(90deg, #8b4a3c, #a0564a, #c27a6a, #a0564a, #8b4a3c);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -279,14 +279,14 @@ h1, h2, h3, h4, h5, h6 {
 .btn--primary {
     background: var(--color-accent-gradient);
     color: #fff;
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 20px rgba(160, 86, 74, 0.3);
 }
 
 .btn--primary:hover {
     transform: translateY(-3px);
     box-shadow:
-        0 0 30px rgba(168, 85, 247, 0.5),
-        0 0 60px rgba(168, 85, 247, 0.3),
+        0 0 30px rgba(160, 86, 74, 0.5),
+        0 0 60px rgba(160, 86, 74, 0.3),
         inset 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
@@ -297,9 +297,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn--glass:hover {
-    background: rgba(168, 85, 247, 0.2);
+    background: rgba(160, 86, 74, 0.2);
     border-color: var(--color-primary);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 20px rgba(160, 86, 74, 0.3);
 }
 
 .btn--large {
@@ -314,8 +314,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes btnPulse {
-    0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.5), 0 0 60px rgba(236, 72, 153, 0.3); }
+    0%, 100% { box-shadow: 0 0 20px rgba(160, 86, 74, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(160, 86, 74, 0.5), 0 0 60px rgba(194, 122, 106, 0.3); }
 }
 
 /* ==========================================
@@ -464,18 +464,18 @@ h1, h2, h3, h4, h5, h6 {
     color: transparent;
     display: block;
     text-shadow:
-        0 0 40px rgba(168, 85, 247, 0.5),
-        0 0 80px rgba(168, 85, 247, 0.3);
+        0 0 40px rgba(160, 86, 74, 0.5),
+        0 0 80px rgba(160, 86, 74, 0.3);
     animation: yearGlow 3s ease-in-out infinite;
 }
 
 @keyframes yearGlow {
     0%, 100% {
-        text-shadow: 0 0 40px rgba(168, 85, 247, 0.5), 0 0 80px rgba(168, 85, 247, 0.3);
+        text-shadow: 0 0 40px rgba(160, 86, 74, 0.5), 0 0 80px rgba(160, 86, 74, 0.3);
         -webkit-text-stroke-color: var(--color-primary);
     }
     50% {
-        text-shadow: 0 0 60px rgba(236, 72, 153, 0.6), 0 0 100px rgba(236, 72, 153, 0.4);
+        text-shadow: 0 0 60px rgba(194, 122, 106, 0.6), 0 0 100px rgba(194, 122, 106, 0.4);
         -webkit-text-stroke-color: var(--color-secondary);
     }
 }
@@ -580,7 +580,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+    text-shadow: 0 0 30px rgba(160, 86, 74, 0.5);
     animation: countGlow 2s ease-in-out infinite;
 }
 
@@ -712,7 +712,7 @@ h1, h2, h3, h4, h5, h6 {
 .stats__item:hover {
     transform: translateY(-8px);
     border-color: var(--color-primary);
-    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+    box-shadow: 0 20px 40px rgba(160, 86, 74, 0.2);
 }
 
 .stats__number {
@@ -722,7 +722,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 40px rgba(168, 85, 247, 0.5);
+    text-shadow: 0 0 40px rgba(160, 86, 74, 0.5);
 }
 
 .stats__suffix {
@@ -752,8 +752,8 @@ h1, h2, h3, h4, h5, h6 {
 .section-tag {
     display: inline-block;
     padding: 8px 20px;
-    background: rgba(168, 85, 247, 0.1);
-    border: 1px solid rgba(168, 85, 247, 0.3);
+    background: rgba(160, 86, 74, 0.1);
+    border: 1px solid rgba(160, 86, 74, 0.3);
     border-radius: 30px;
     font-size: 13px;
     font-weight: 600;
@@ -816,7 +816,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(168, 85, 247, 0.1);
+    background: rgba(160, 86, 74, 0.1);
     border-radius: 16px;
 }
 
@@ -1037,7 +1037,7 @@ h1, h2, h3, h4, h5, h6 {
 .training__icon {
     width: 80px;
     height: 80px;
-    background: rgba(168, 85, 247, 0.1);
+    background: rgba(160, 86, 74, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1339,8 +1339,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-section__location img {
     width: 100%;
-    height: 180px;
+    height: 320px;
     object-fit: cover;
+    object-position: bottom;
 }
 
 .form-section__location-info {
@@ -1394,8 +1395,8 @@ h1, h2, h3, h4, h5, h6 {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-primary);
-    background: rgba(168, 85, 247, 0.1);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2), inset 0 0 20px rgba(168, 85, 247, 0.05);
+    background: rgba(160, 86, 74, 0.1);
+    box-shadow: 0 0 20px rgba(160, 86, 74, 0.2), inset 0 0 20px rgba(160, 86, 74, 0.05);
 }
 
 .form-group input::placeholder,
@@ -1468,15 +1469,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .package-option:hover .package-option__content {
     border-color: var(--color-primary);
-    background: rgba(168, 85, 247, 0.1);
+    background: rgba(160, 86, 74, 0.1);
 }
 
 .package-option input:checked + .package-option__content {
     border-color: var(--color-primary);
-    background: rgba(168, 85, 247, 0.15);
+    background: rgba(160, 86, 74, 0.15);
     box-shadow:
-        0 0 30px rgba(168, 85, 247, 0.3),
-        inset 0 0 30px rgba(168, 85, 247, 0.1);
+        0 0 30px rgba(160, 86, 74, 0.3),
+        inset 0 0 30px rgba(160, 86, 74, 0.1);
 }
 
 .package-option input:checked + .package-option__content::before {
@@ -1619,16 +1620,16 @@ h1, h2, h3, h4, h5, h6 {
     inset: 0;
     background:
         linear-gradient(180deg, rgba(3, 0, 20, 0.3) 0%, rgba(3, 0, 20, 0.6) 50%, rgba(3, 0, 20, 0.95) 100%),
-        linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, transparent 50%),
-        linear-gradient(225deg, rgba(236, 72, 153, 0.15) 0%, transparent 50%);
+        linear-gradient(135deg, rgba(160, 86, 74, 0.2) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(194, 122, 106, 0.15) 0%, transparent 50%);
 }
 
 .hero__bg-grid {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(168, 85, 247, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(168, 85, 247, 0.08) 1px, transparent 1px);
+        linear-gradient(rgba(160, 86, 74, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(160, 86, 74, 0.08) 1px, transparent 1px);
     background-size: 60px 60px;
     animation: gridMove 20s linear infinite;
 }
@@ -1645,8 +1646,8 @@ h1, h2, h3, h4, h5, h6 {
         0deg,
         transparent,
         transparent 2px,
-        rgba(168, 85, 247, 0.03) 2px,
-        rgba(168, 85, 247, 0.03) 4px
+        rgba(160, 86, 74, 0.03) 2px,
+        rgba(160, 86, 74, 0.03) 4px
     );
     pointer-events: none;
     animation: scanlineMove 8s linear infinite;
@@ -1670,7 +1671,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 50% at 50% 100%, rgba(168, 85, 247, 0.15), transparent),
+        radial-gradient(ellipse 80% 50% at 50% 100%, rgba(160, 86, 74, 0.15), transparent),
         radial-gradient(ellipse 60% 40% at 20% 50%, rgba(6, 182, 212, 0.1), transparent);
     pointer-events: none;
 }
@@ -1757,8 +1758,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 12px;
     padding: 12px 16px;
-    background: rgba(168, 85, 247, 0.1);
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    background: rgba(160, 86, 74, 0.1);
+    border: 1px solid rgba(160, 86, 74, 0.2);
     clip-path: var(--clip-corner-sm);
     font-size: 14px;
     color: rgba(255, 255, 255, 0.9);
@@ -1932,7 +1933,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     font-size: 14px;
     color: var(--color-primary);
-    border-color: rgba(168, 85, 247, 0.3);
+    border-color: rgba(160, 86, 74, 0.3);
     animation-delay: -2s;
 }
 
