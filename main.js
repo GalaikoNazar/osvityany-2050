@@ -453,6 +453,45 @@ document.querySelectorAll('.ticket__amount').forEach(function(el) {
     document.head.appendChild(style);
 })();
 
+// ==========================================
+// Hide package selector for speaker/partner forms
+// ==========================================
+(function() {
+    var hidePackageButtons = document.querySelectorAll('[data-hide-package="true"]');
+    var packageGroup = document.querySelector('#packageSelector')?.closest('.form-group');
+    var formTitle = document.querySelector('.form-section__info .section-title');
+    var originalTitle = formTitle ? formTitle.innerHTML : '';
+
+    hidePackageButtons.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            if (packageGroup) {
+                packageGroup.style.display = 'none';
+            }
+
+            // Update form title based on type
+            var formType = btn.getAttribute('data-form-type');
+            if (formTitle && formType === 'speaker') {
+                formTitle.innerHTML = 'Стати<br><span class="text-gradient-animated">доповідачем</span>';
+            } else if (formTitle && formType === 'partner') {
+                formTitle.innerHTML = 'Запропонувати<br><span class="text-gradient-animated">партнерство</span>';
+            }
+        });
+    });
+
+    // Show package selector when clicking regular registration buttons
+    var regularButtons = document.querySelectorAll('a[href="#form"]:not([data-hide-package])');
+    regularButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            if (packageGroup) {
+                packageGroup.style.display = '';
+            }
+            if (formTitle) {
+                formTitle.innerHTML = originalTitle;
+            }
+        });
+    });
+})();
+
 console.log('Script loaded successfully. Timer should be running.');
 
 // ==========================================
@@ -472,88 +511,70 @@ console.log('Script loaded successfully. Timer should be running.');
 
     if (!customizer || !toggle) return;
 
-    // Default colors
+    // Default colors (Navy Blue / Terracotta theme)
     var defaultColors = {
-        '--color-bg': '#050505',
-        '--color-bg-light': '#0a0a0a',
-        '--color-bg-card': '#111111',
+        '--color-bg': '#0a1628',
+        '--color-bg-light': '#0d1b2a',
         '--color-text': '#ffffff',
-        '--color-text-muted': '#888888',
-        '--color-accent': '#11DBAC',
-        '--color-accent-light': '#3de8c0',
-        '--color-accent-dark': '#0cb890',
-        '--color-border': '#1a1a1a',
-        '--color-border-light': '#2a2a2a'
+        '--color-text-muted': '#c4a39a',
+        '--color-primary': '#a0564a',
+        '--color-secondary': '#c27a6a'
     };
 
     // Theme presets
     var presets = {
         'default': {
-            '--color-bg': '#050505',
-            '--color-bg-light': '#0a0a0a',
-            '--color-bg-card': '#111111',
+            '--color-bg': '#0a1628',
+            '--color-bg-light': '#0d1b2a',
             '--color-text': '#ffffff',
-            '--color-text-muted': '#888888',
-            '--color-accent': '#11DBAC',
-            '--color-border': '#1a1a1a',
-            '--color-border-light': '#2a2a2a'
+            '--color-text-muted': '#c4a39a',
+            '--color-primary': '#a0564a',
+            '--color-secondary': '#c27a6a'
         },
         'ocean': {
             '--color-bg': '#0a192f',
             '--color-bg-light': '#112240',
-            '--color-bg-card': '#1d3557',
             '--color-text': '#e6f1ff',
             '--color-text-muted': '#8892b0',
-            '--color-accent': '#64ffda',
-            '--color-border': '#233554',
-            '--color-border-light': '#303c55'
+            '--color-primary': '#64ffda',
+            '--color-secondary': '#64ffda'
+        },
+        'emerald': {
+            '--color-bg': '#050505',
+            '--color-bg-light': '#0a0a0a',
+            '--color-text': '#ffffff',
+            '--color-text-muted': '#888888',
+            '--color-primary': '#11DBAC',
+            '--color-secondary': '#3de8c0'
         },
         'sunset': {
             '--color-bg': '#1a1a2e',
             '--color-bg-light': '#16213e',
-            '--color-bg-card': '#0f3460',
             '--color-text': '#ffeaa7',
             '--color-text-muted': '#dfe6e9',
-            '--color-accent': '#ff6b6b',
-            '--color-border': '#2a2a4a',
-            '--color-border-light': '#3a3a5a'
-        },
-        'forest': {
-            '--color-bg': '#0d1f0d',
-            '--color-bg-light': '#1a331a',
-            '--color-bg-card': '#264d26',
-            '--color-text': '#ecf0f1',
-            '--color-text-muted': '#95a5a6',
-            '--color-accent': '#2ecc71',
-            '--color-border': '#1e3d1e',
-            '--color-border-light': '#2d4d2d'
+            '--color-primary': '#ff6b6b',
+            '--color-secondary': '#ff8e8e'
         },
         'purple': {
             '--color-bg': '#0f0f1a',
             '--color-bg-light': '#1a1a2e',
-            '--color-bg-card': '#252542',
             '--color-text': '#f3e8ff',
             '--color-text-muted': '#a78bfa',
-            '--color-accent': '#a855f7',
-            '--color-border': '#2a2a4a',
-            '--color-border-light': '#3b3b5c'
+            '--color-primary': '#a855f7',
+            '--color-secondary': '#c084fc'
         },
         'light': {
-            '--color-bg': '#ffffff',
-            '--color-bg-light': '#f1f5f9',
-            '--color-bg-card': '#ffffff',
+            '--color-bg': '#f8fafc',
+            '--color-bg-light': '#e2e8f0',
             '--color-text': '#1e293b',
             '--color-text-muted': '#64748b',
-            '--color-accent': '#0ea5e9',
-            '--color-border': '#e2e8f0',
-            '--color-border-light': '#cbd5e1'
+            '--color-primary': '#8b4a3c',
+            '--color-secondary': '#c27a6a'
         }
     };
 
-    // LocalStorage key
-    var STORAGE_KEY = 'osvityany2050_custom_styles';
+    var STORAGE_KEY = 'pedagogy2026_custom_styles';
 
-    // Open/close customizer
     function openCustomizer() {
         customizer.classList.add('active');
         overlay.classList.add('active');
@@ -570,34 +591,28 @@ console.log('Script loaded successfully. Timer should be running.');
     closeBtn.addEventListener('click', closeCustomizer);
     overlay.addEventListener('click', closeCustomizer);
 
-    // Close on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && customizer.classList.contains('active')) {
             closeCustomizer();
         }
     });
 
-    // Apply a single color
     function applyColor(varName, color) {
         document.documentElement.style.setProperty(varName, color);
 
-        // Update related colors for accent
-        if (varName === '--color-accent') {
-            var lighterColor = lightenColor(color, 20);
-            var darkerColor = darkenColor(color, 15);
-            var glowColor = hexToRgba(color, 0.4);
-
-            document.documentElement.style.setProperty('--color-accent-light', lighterColor);
-            document.documentElement.style.setProperty('--color-accent-dark', darkerColor);
-            document.documentElement.style.setProperty('--color-accent-glow', glowColor);
+        if (varName === '--color-primary' || varName === '--color-secondary') {
+            var primary = getComputedStyle(document.documentElement).getPropertyValue('--color-primary').trim() || color;
+            var secondary = getComputedStyle(document.documentElement).getPropertyValue('--color-secondary').trim() || color;
             document.documentElement.style.setProperty(
                 '--color-accent-gradient',
-                'linear-gradient(135deg, ' + color + ' 0%, ' + darkerColor + ' 50%, ' + darkenColor(color, 25) + ' 100%)'
+                'linear-gradient(135deg, ' + primary + ' 0%, ' + secondary + ' 100%)'
             );
+            document.documentElement.style.setProperty('--color-glow', hexToRgba(primary, 0.5));
+            document.documentElement.style.setProperty('--color-border', hexToRgba(primary, 0.3));
+            document.documentElement.style.setProperty('--glass-border', hexToRgba(primary, 0.2));
         }
     }
 
-    // Apply theme preset
     function applyPreset(presetName) {
         var preset = presets[presetName];
         if (!preset) return;
@@ -607,7 +622,6 @@ console.log('Script loaded successfully. Timer should be running.');
             updateInputs(varName, preset[varName]);
         });
 
-        // Update active preset button
         presetBtns.forEach(function(btn) {
             btn.classList.remove('active');
             if (btn.dataset.preset === presetName) {
@@ -619,7 +633,6 @@ console.log('Script loaded successfully. Timer should be running.');
         showSavedIndicator();
     }
 
-    // Update color picker and hex inputs
     function updateInputs(varName, color) {
         colorInputs.forEach(function(input) {
             if (input.dataset.var === varName) {
@@ -634,7 +647,6 @@ console.log('Script loaded successfully. Timer should be running.');
         });
     }
 
-    // Save to localStorage
     function saveToLocalStorage() {
         var styles = {};
         var computedStyle = getComputedStyle(document.documentElement);
@@ -646,7 +658,6 @@ console.log('Script loaded successfully. Timer should be running.');
             }
         });
 
-        // Save current preset if any
         var activePreset = document.querySelector('.preset-btn.active');
         if (activePreset) {
             styles._preset = activePreset.dataset.preset;
@@ -655,15 +666,11 @@ console.log('Script loaded successfully. Timer should be running.');
         localStorage.setItem(STORAGE_KEY, JSON.stringify(styles));
     }
 
-    // Load from localStorage
     function loadFromLocalStorage() {
         var saved = localStorage.getItem(STORAGE_KEY);
 
-        // If no saved styles, apply default preset and sync inputs
         if (!saved) {
-            // Apply default colors to ensure consistency
             Object.keys(defaultColors).forEach(function(varName) {
-                applyColor(varName, defaultColors[varName]);
                 updateInputs(varName, defaultColors[varName]);
             });
             return;
@@ -679,7 +686,6 @@ console.log('Script loaded successfully. Timer should be running.');
                 }
             });
 
-            // Set active preset
             if (styles._preset) {
                 presetBtns.forEach(function(btn) {
                     btn.classList.remove('active');
@@ -697,7 +703,6 @@ console.log('Script loaded successfully. Timer should be running.');
         }
     }
 
-    // Show saved indicator
     function showSavedIndicator() {
         savedIndicator.classList.add('show');
         setTimeout(function() {
@@ -705,46 +710,20 @@ console.log('Script loaded successfully. Timer should be running.');
         }, 2000);
     }
 
-    // Color manipulation helpers
     function hexToRgba(hex, alpha) {
+        if (!hex || hex.length < 7) return 'rgba(160, 86, 74, ' + alpha + ')';
         var r = parseInt(hex.slice(1, 3), 16);
         var g = parseInt(hex.slice(3, 5), 16);
         var b = parseInt(hex.slice(5, 7), 16);
         return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')';
     }
 
-    function lightenColor(hex, percent) {
-        var r = parseInt(hex.slice(1, 3), 16);
-        var g = parseInt(hex.slice(3, 5), 16);
-        var b = parseInt(hex.slice(5, 7), 16);
-
-        r = Math.min(255, Math.floor(r + (255 - r) * (percent / 100)));
-        g = Math.min(255, Math.floor(g + (255 - g) * (percent / 100)));
-        b = Math.min(255, Math.floor(b + (255 - b) * (percent / 100)));
-
-        return '#' + r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0');
-    }
-
-    function darkenColor(hex, percent) {
-        var r = parseInt(hex.slice(1, 3), 16);
-        var g = parseInt(hex.slice(3, 5), 16);
-        var b = parseInt(hex.slice(5, 7), 16);
-
-        r = Math.max(0, Math.floor(r * (1 - percent / 100)));
-        g = Math.max(0, Math.floor(g * (1 - percent / 100)));
-        b = Math.max(0, Math.floor(b * (1 - percent / 100)));
-
-        return '#' + r.toString(16).padStart(2, '0') + g.toString(16).padStart(2, '0') + b.toString(16).padStart(2, '0');
-    }
-
-    // Preset buttons click handlers
     presetBtns.forEach(function(btn) {
         btn.addEventListener('click', function() {
             applyPreset(this.dataset.preset);
         });
     });
 
-    // Color picker change handlers
     colorInputs.forEach(function(input) {
         input.addEventListener('input', function() {
             var varName = this.dataset.var;
@@ -753,7 +732,6 @@ console.log('Script loaded successfully. Timer should be running.');
             applyColor(varName, color);
             updateInputs(varName, color);
 
-            // Clear active preset when manually editing
             presetBtns.forEach(function(btn) {
                 btn.classList.remove('active');
             });
@@ -763,17 +741,14 @@ console.log('Script loaded successfully. Timer should be running.');
         });
     });
 
-    // Hex input change handlers
     hexInputs.forEach(function(input) {
         input.addEventListener('input', function() {
             var value = this.value;
 
-            // Add # if missing
             if (value.length > 0 && value[0] !== '#') {
                 value = '#' + value;
             }
 
-            // Validate hex format
             if (/^#[0-9A-Fa-f]{6}$/.test(value)) {
                 var varName = this.dataset.var;
                 applyColor(varName, value);
@@ -789,7 +764,6 @@ console.log('Script loaded successfully. Timer should be running.');
         });
 
         input.addEventListener('blur', function() {
-            // Ensure valid format on blur
             var value = this.value;
             if (!/^#[0-9A-Fa-f]{6}$/.test(value)) {
                 var varName = this.dataset.var;
@@ -799,7 +773,6 @@ console.log('Script loaded successfully. Timer should be running.');
         });
     });
 
-    // Reset button
     resetBtn.addEventListener('click', function() {
         if (confirm('Скинути всі налаштування стилю до стандартних?')) {
             applyPreset('default');
@@ -807,7 +780,6 @@ console.log('Script loaded successfully. Timer should be running.');
         }
     });
 
-    // Export button
     exportBtn.addEventListener('click', function() {
         var computedStyle = getComputedStyle(document.documentElement);
         var cssText = ':root {\n';
@@ -817,24 +789,17 @@ console.log('Script loaded successfully. Timer should be running.');
             cssText += '    ' + varName + ': ' + value + ';\n';
         });
 
-        // Add generated colors
-        cssText += '    --color-accent-light: ' + computedStyle.getPropertyValue('--color-accent-light').trim() + ';\n';
-        cssText += '    --color-accent-dark: ' + computedStyle.getPropertyValue('--color-accent-dark').trim() + ';\n';
-        cssText += '    --color-accent-glow: ' + computedStyle.getPropertyValue('--color-accent-glow').trim() + ';\n';
         cssText += '    --color-accent-gradient: ' + computedStyle.getPropertyValue('--color-accent-gradient').trim() + ';\n';
+        cssText += '    --color-glow: ' + computedStyle.getPropertyValue('--color-glow').trim() + ';\n';
         cssText += '}';
 
-        // Copy to clipboard
         navigator.clipboard.writeText(cssText).then(function() {
             alert('CSS скопійовано в буфер обміну!');
         }).catch(function() {
-            // Fallback - show in prompt
             prompt('Скопіюйте CSS:', cssText);
         });
     });
 
-    // Load saved styles on page load
     loadFromLocalStorage();
-
     console.log('Style Customizer initialized.');
 })();
