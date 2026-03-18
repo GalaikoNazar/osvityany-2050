@@ -518,7 +518,9 @@ console.log('Script loaded successfully. Timer should be running.');
         '--color-text': '#ffffff',
         '--color-text-muted': '#c4a39a',
         '--color-primary': '#a0564a',
-        '--color-secondary': '#c27a6a'
+        '--color-secondary': '#c27a6a',
+        '--glass-bg': 'rgba(10, 22, 40, 0.7)',
+        '--color-bg-card': 'rgba(255, 255, 255, 0.02)'
     };
 
     // Theme presets
@@ -529,7 +531,9 @@ console.log('Script loaded successfully. Timer should be running.');
             '--color-text': '#ffffff',
             '--color-text-muted': '#c4a39a',
             '--color-primary': '#a0564a',
-            '--color-secondary': '#c27a6a'
+            '--color-secondary': '#c27a6a',
+            '--glass-bg': 'rgba(10, 22, 40, 0.7)',
+            '--color-bg-card': 'rgba(255, 255, 255, 0.02)'
         },
         'ocean': {
             '--color-bg': '#0a192f',
@@ -537,7 +541,9 @@ console.log('Script loaded successfully. Timer should be running.');
             '--color-text': '#e6f1ff',
             '--color-text-muted': '#8892b0',
             '--color-primary': '#64ffda',
-            '--color-secondary': '#64ffda'
+            '--color-secondary': '#64ffda',
+            '--glass-bg': 'rgba(10, 25, 47, 0.8)',
+            '--color-bg-card': 'rgba(255, 255, 255, 0.02)'
         },
         'emerald': {
             '--color-bg': '#050505',
@@ -545,7 +551,9 @@ console.log('Script loaded successfully. Timer should be running.');
             '--color-text': '#ffffff',
             '--color-text-muted': '#888888',
             '--color-primary': '#11DBAC',
-            '--color-secondary': '#3de8c0'
+            '--color-secondary': '#3de8c0',
+            '--glass-bg': 'rgba(5, 5, 5, 0.8)',
+            '--color-bg-card': 'rgba(255, 255, 255, 0.02)'
         },
         'sunset': {
             '--color-bg': '#1a1a2e',
@@ -553,7 +561,9 @@ console.log('Script loaded successfully. Timer should be running.');
             '--color-text': '#ffeaa7',
             '--color-text-muted': '#dfe6e9',
             '--color-primary': '#ff6b6b',
-            '--color-secondary': '#ff8e8e'
+            '--color-secondary': '#ff8e8e',
+            '--glass-bg': 'rgba(26, 26, 46, 0.8)',
+            '--color-bg-card': 'rgba(255, 255, 255, 0.02)'
         },
         'purple': {
             '--color-bg': '#0f0f1a',
@@ -561,23 +571,90 @@ console.log('Script loaded successfully. Timer should be running.');
             '--color-text': '#f3e8ff',
             '--color-text-muted': '#a78bfa',
             '--color-primary': '#a855f7',
-            '--color-secondary': '#c084fc'
+            '--color-secondary': '#c084fc',
+            '--glass-bg': 'rgba(15, 15, 26, 0.8)',
+            '--color-bg-card': 'rgba(255, 255, 255, 0.02)'
         },
-        'light': {
+        // Light themes
+        'light-terracotta': {
+            '--color-bg': '#faf8f7',
+            '--color-bg-light': '#f5f0ed',
+            '--color-text': '#2d2522',
+            '--color-text-muted': '#6b5b54',
+            '--color-primary': '#a0564a',
+            '--color-secondary': '#c27a6a',
+            '--glass-bg': 'rgba(255, 255, 255, 0.9)',
+            '--color-bg-card': 'rgba(160, 86, 74, 0.05)'
+        },
+        'light-blue': {
             '--color-bg': '#f8fafc',
             '--color-bg-light': '#e2e8f0',
             '--color-text': '#1e293b',
             '--color-text-muted': '#64748b',
-            '--color-primary': '#8b4a3c',
-            '--color-secondary': '#c27a6a'
+            '--color-primary': '#3b82f6',
+            '--color-secondary': '#60a5fa',
+            '--glass-bg': 'rgba(255, 255, 255, 0.9)',
+            '--color-bg-card': 'rgba(59, 130, 246, 0.05)'
         },
-        'education': {
-            '--color-bg': '#fefefe',
-            '--color-bg-light': '#f0f4f8',
-            '--color-text': '#2d3748',
-            '--color-text-muted': '#718096',
-            '--color-primary': '#3182ce',
-            '--color-secondary': '#63b3ed'
+        'light-green': {
+            '--color-bg': '#f0fdf4',
+            '--color-bg-light': '#dcfce7',
+            '--color-text': '#14532d',
+            '--color-text-muted': '#166534',
+            '--color-primary': '#16a34a',
+            '--color-secondary': '#22c55e',
+            '--glass-bg': 'rgba(255, 255, 255, 0.9)',
+            '--color-bg-card': 'rgba(22, 163, 74, 0.05)'
+        },
+        'light-purple': {
+            '--color-bg': '#faf5ff',
+            '--color-bg-light': '#f3e8ff',
+            '--color-text': '#3b0764',
+            '--color-text-muted': '#6b21a8',
+            '--color-primary': '#9333ea',
+            '--color-secondary': '#a855f7',
+            '--glass-bg': 'rgba(255, 255, 255, 0.9)',
+            '--color-bg-card': 'rgba(147, 51, 234, 0.05)'
+        },
+        'light-orange': {
+            '--color-bg': '#fffbeb',
+            '--color-bg-light': '#fef3c7',
+            '--color-text': '#78350f',
+            '--color-text-muted': '#92400e',
+            '--color-primary': '#d97706',
+            '--color-secondary': '#f59e0b',
+            '--glass-bg': 'rgba(255, 255, 255, 0.9)',
+            '--color-bg-card': 'rgba(217, 119, 6, 0.05)'
+        },
+        'light-pink': {
+            '--color-bg': '#fdf2f8',
+            '--color-bg-light': '#fce7f3',
+            '--color-text': '#831843',
+            '--color-text-muted': '#9d174d',
+            '--color-primary': '#db2777',
+            '--color-secondary': '#ec4899',
+            '--glass-bg': 'rgba(255, 255, 255, 0.9)',
+            '--color-bg-card': 'rgba(219, 39, 119, 0.05)'
+        },
+        'light-cyan': {
+            '--color-bg': '#ecfeff',
+            '--color-bg-light': '#cffafe',
+            '--color-text': '#164e63',
+            '--color-text-muted': '#0e7490',
+            '--color-primary': '#0891b2',
+            '--color-secondary': '#06b6d4',
+            '--glass-bg': 'rgba(255, 255, 255, 0.9)',
+            '--color-bg-card': 'rgba(8, 145, 178, 0.05)'
+        },
+        'light-neutral': {
+            '--color-bg': '#fafafa',
+            '--color-bg-light': '#f5f5f5',
+            '--color-text': '#171717',
+            '--color-text-muted': '#525252',
+            '--color-primary': '#404040',
+            '--color-secondary': '#737373',
+            '--glass-bg': 'rgba(255, 255, 255, 0.9)',
+            '--color-bg-card': 'rgba(64, 64, 64, 0.05)'
         }
     };
 
@@ -618,6 +695,11 @@ console.log('Script loaded successfully. Timer should be running.');
             document.documentElement.style.setProperty('--color-glow', hexToRgba(primary, 0.5));
             document.documentElement.style.setProperty('--color-border', hexToRgba(primary, 0.3));
             document.documentElement.style.setProperty('--glass-border', hexToRgba(primary, 0.2));
+        }
+
+        // Update cyan color to match text-muted for consistency
+        if (varName === '--color-text-muted') {
+            document.documentElement.style.setProperty('--color-cyan', color);
         }
     }
 
