@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Освітяни 2050 | Освітній форум</title>
+    <meta name="description" content="Освітній форум для педагогів у соціальних медіа. Буковель, Radisson Blu Resort. 5-6 травня 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">ОСВІТЯНИ<span>2050</span></a>
+            <nav class="nav" id="nav">
+                <a href="#about" class="nav__link">Про подію</a>
+                <a href="#program" class="nav__link">Програма</a>
+                <a href="#speakers" class="nav__link">Спікери</a>
+                <a href="#tickets" class="nav__link">Квитки</a>
+                <a href="#faq" class="nav__link">FAQ</a>
+                <a href="#form" class="nav__link">Реєстрація</a>
+            </nav>
+            <div class="header__actions">
+                <a href="#tickets" class="btn btn--primary">Купити квитки</a>
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__bg">
+            <div class="hero__image">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop" alt="Conference">
+            </div>
+            <div class="hero__overlay"></div>
+            <div class="hero__gradient"></div>
+            <div class="hero__lines"></div>
+            <div class="hero__shapes">
+                <div class="shape shape--1"></div>
+                <div class="shape shape--2"></div>
+                <div class="shape shape--3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero__content" data-aos="fade-up">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    Освітній форум
+                </div>
+                <h1 class="hero__title">
+                    <span class="hero__title-line">
+                        <span class="hero__title-accent" data-text="ОСВІТЯНИ">ОСВІТЯНИ</span>
+                    </span>
+                    <span class="hero__title-line">
+                        <span class="hero__title-year">2050</span>
+                    </span>
+                </h1>
+                <p class="hero__subtitle">Педагоги в соціальних медіа</p>
+                <div class="hero__info">
+                    <div class="hero__info-item">
+                        <div class="hero__info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <span>5-6 травня 2026</span>
+                    </div>
+                    <div class="hero__info-item">
+                        <div class="hero__info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <span>Буковель, Radisson Blu Resort</span>
+                    </div>
+                </div>
+                <div class="hero__tags">
+                    <span class="tag tag--animated">Трансформація освіти</span>
+                    <span class="tag tag--animated">Практичні інструменти</span>
+                    <span class="tag tag--animated">Нетворкінг</span>
+                </div>
+                <div class="hero__buttons">
+                    <a href="#form" class="btn btn--primary btn--large btn--glow">
+                        <span>Зареєструватись</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn btn--outline btn--large">Дізнатись більше</a>
+                </div>
+                <div class="hero__countdown">
+                    <p class="hero__countdown-label">До початку форуму:</p>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown__item">
+                            <span class="countdown__number" id="days">00</span>
+                            <span class="countdown__label">днів</span>
+                        </div>
+                        <div class="countdown__separator">:</div>
+                        <div class="countdown__item">
+                            <span class="countdown__number" id="hours">00</span>
+                            <span class="countdown__label">годин</span>
+                        </div>
+                        <div class="countdown__separator">:</div>
+                        <div class="countdown__item">
+                            <span class="countdown__number" id="minutes">00</span>
+                            <span class="countdown__label">хвилин</span>
+                        </div>
+                        <div class="countdown__separator">:</div>
+                        <div class="countdown__item">
+                            <span class="countdown__number" id="seconds">00</span>
+                            <span class="countdown__label">секунд</span>
+                        </div>
+                    </div>
+                    <script>
+                    var countdownEnd = new Date("May 5, 2026 09:00:00").getTime();
+                    function updateCountdown(){
+                        var now = new Date().getTime();
+                        var t = countdownEnd - now;
+                        if(t < 0) t = 0;
+                        var d = Math.floor(t / 86400000);
+                        var h = Math.floor((t % 86400000) / 3600000);
+                        var m = Math.floor((t % 3600000) / 60000);
+                        var s = Math.floor((t % 60000) / 1000);
+                        document.getElementById("days").innerHTML = (d < 10 ? "0" : "") + d;
+                        document.getElementById("hours").innerHTML = (h < 10 ? "0" : "") + h;
+                        document.getElementById("minutes").innerHTML = (m < 10 ? "0" : "") + m;
+                        document.getElementById("seconds").innerHTML = (s < 10 ? "0" : "") + s;
+                    }
+                    updateCountdown();
+                    setInterval(updateCountdown, 1000);
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <div class="hero__scroll-mouse">
+                <div class="hero__scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+        <div class="hero__social">
+            <a href="#" class="hero__social-link" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="#" class="hero__social-link" aria-label="Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stats__item">
+                    <span class="stats__number" data-count="2">0</span>
+                    <span class="stats__label">дні форуму</span>
+                </div>
+                <div class="stats__item">
+                    <span class="stats__number" data-count="500">0</span>
+                    <span class="stats__suffix">+</span>
+                    <span class="stats__label">учасників</span>
+                </div>
+                <div class="stats__item">
+                    <span class="stats__number" data-count="20">0</span>
+                    <span class="stats__suffix">+</span>
+                    <span class="stats__label">спікерів</span>
+                </div>
+                <div class="stats__item">
+                    <span class="stats__number" data-count="10">0</span>
+                    <span class="stats__suffix">+</span>
+                    <span class="stats__label">воркшопів</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Про подію</span>
+                <h2 class="section-title">Простір стратегій та рішень для трансформації школи</h2>
+            </div>
+            <div class="about__content">
+                <div class="about__text">
+                    <p><strong>«Освітяни 2050»</strong> — це простір стратегій, інструментів та рішень, які допоможуть трансформувати школи вже сьогодні.</p>
+                    <p>Мета форуму — дати учасникам практичні інструменти та знання для трансформації школи, команди та освітніх процесів уже сьогодні.</p>
+                </div>
+                <div class="about__features">
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <h3>Практичні інструменти</h3>
+                        <p>Готові рішення для впровадження в школі</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Нетворкінг</h3>
+                        <p>Знайомства з професійною спільнотою</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3>Експертиза</h3>
+                        <p>Досвід найкращих спікерів галузі</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="program" id="program">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Програма</span>
+                <h2 class="section-title">2 дні насиченої програми</h2>
+            </div>
+            <div class="program__tabs">
+                <button class="program__tab active" data-day="1">День 1 <span>5 травня 2026</span></button>
+                <button class="program__tab" data-day="2">День 2 <span>6 травня 2026</span></button>
+            </div>
+            <div class="program__content">
+                <div class="program__day active" data-day="1">
+                    <div class="program__item">
+                        <div class="program__time">09:00 - 10:00</div>
+                        <div class="program__info">
+                            <h3>Реєстрація та welcome-кава</h3>
+                            <p>Знайомство з учасниками та отримання матеріалів</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+                        <div class="program__time">10:00 - 11:30</div>
+                        <div class="program__info">
+                            <h3>Відкриття форуму. Пленарна сесія</h3>
+                            <p>Вступне слово та огляд трендів освіти 2050</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+                        <div class="program__time">11:30 - 13:00</div>
+                        <div class="program__info">
+                            <h3>Панельна дискусія</h3>
+                            <p>Соціальні медіа як інструмент педагога</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+                        <div class="program__time">13:00 - 14:00</div>
+                        <div class="program__info">
+                            <h3>Обід та нетворкінг</h3>
+                            <p>Час для неформального спілкування</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+                        <div class="program__time">14:00 - 17:00</div>
+                        <div class="program__info">
+                            <h3>Виступи спікерів на основній сцені</h3>
+                            <p>Практичні кейси та інструменти</p>
+                        </div>
+                    </div>
+                    <div class="program__item program__item--highlight">
+                        <div class="program__time">19:00 - 22:00</div>
+                        <div class="program__info">
+                            <h3>Закрита нетворкінг-вечеря</h3>
+                            <p>Тільки для VIP-учасників</p>
+                            <span class="program__badge">VIP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="program__day" data-day="2">
+                    <div class="program__item">
+                        <div class="program__time">09:00 - 10:00</div>
+                        <div class="program__info">
+                            <h3>Ранкова кава</h3>
+                            <p>Початок другого дня</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+                        <div class="program__time">10:00 - 13:00</div>
+                        <div class="program__info">
+                            <h3>Тренінгова програма</h3>
+                            <p>Практичні воркшопи та майстер-класи</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+                        <div class="program__time">13:00 - 14:00</div>
+                        <div class="program__info">
+                            <h3>Обід</h3>
+                            <p>Перерва та нетворкінг</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+                        <div class="program__time">14:00 - 16:00</div>
+                        <div class="program__info">
+                            <h3>Q&A-сесії зі спікерами</h3>
+                            <p>Можливість поставити питання експертам</p>
+                        </div>
+                    </div>
+                    <div class="program__item">
+                        <div class="program__time">16:00 - 17:00</div>
+                        <div class="program__info">
+                            <h3>Закриття форуму</h3>
+                            <p>Підведення підсумків та нагородження</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="speakers" id="speakers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-aos="fade-up">Спікери</span>
+                <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Експерти галузі</h2>
+                <p class="section-desc" data-aos="fade-up" data-aos-delay="200">Провідні освітяни та лідери думок</p>
+            </div>
+            <div class="speakers__grid">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="0">
+                    <div class="speaker__photo">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face" alt="Олена Коваленко">
+                        <div class="speaker__overlay">
+                            <div class="speaker__social">
+                                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"></path><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="speaker__name">Олена Коваленко</h3>
+                    <p class="speaker__role">CEO EdTech Ukraine</p>
+                </div>
+                <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                    <div class="speaker__photo">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face" alt="Андрій Мельник">
+                        <div class="speaker__overlay">
+                            <div class="speaker__social">
+                                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"></path><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="speaker__name">Андрій Мельник</h3>
+                    <p class="speaker__role">Засновник "Нова Школа"</p>
+                </div>
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <div class="speaker__photo">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face" alt="Марія Шевченко">
+                        <div class="speaker__overlay">
+                            <div class="speaker__social">
+                                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"></path><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="speaker__name">Марія Шевченко</h3>
+                    <p class="speaker__role">Блогер, 500K+ підписників</p>
+                </div>
+                <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                    <div class="speaker__photo">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Ігор Бондаренко">
+                        <div class="speaker__overlay">
+                            <div class="speaker__social">
+                                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"></path><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="speaker__name">Ігор Бондаренко</h3>
+                    <p class="speaker__role">Директор ліцею №1</p>
+                </div>
+                <div class="speaker" data-aos="fade-up" data-aos-delay="400">
+                    <div class="speaker__photo">
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop&crop=face" alt="Наталія Петренко">
+                        <div class="speaker__overlay">
+                            <div class="speaker__social">
+                                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"></path><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="speaker__name">Наталія Петренко</h3>
+                    <p class="speaker__role">Психолог, автор книг</p>
+                </div>
+                <div class="speaker" data-aos="fade-up" data-aos-delay="500">
+                    <div class="speaker__photo">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Олексій Савченко">
+                        <div class="speaker__overlay">
+                            <div class="speaker__social">
+                                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"></path><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="speaker__name">Олексій Циган</h3>
+                    <p class="speaker__role">SMM-експерт</p>
+                </div>
+                <div class="speaker" data-aos="fade-up" data-aos-delay="600">
+                    <div class="speaker__photo">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face" alt="Юлія Кравчук">
+                        <div class="speaker__overlay">
+                            <div class="speaker__social">
+                                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"></path><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="speaker__name">Юлія Кравчук</h3>
+                    <p class="speaker__role">Освітній консультант</p>
+                </div>
+                <div class="speaker" data-aos="fade-up" data-aos-delay="700">
+                    <div class="speaker__photo">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="Дмитро Левченко">
+                        <div class="speaker__overlay">
+                            <div class="speaker__social">
+                                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+                                <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"></path><rect x="2" y="9" width="4" height="12" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="4" cy="4" r="2" fill="none" stroke="currentColor" stroke-width="2"></circle></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="speaker__name">Дмитро Жид</h3>
+                    <p class="speaker__role">YouTube-блогер</p>
+                </div>
+            </div>
+            <div class="speakers__more" data-aos="fade-up">
+                <p>+ ще 12 експертів освіти</p>
+            </div>
+            <div class="speakers__cta" data-aos="fade-up">
+                <a href="#form" class="btn btn--outline btn--glow">Стати спікером</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section class="tickets" id="tickets">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Квитки</span>
+                <h2 class="section-title">Оберіть свій пакет участі</h2>
+            </div>
+            <div class="tickets__grid">
+                <!-- Online Package -->
+                <div class="ticket">
+                    <div class="ticket__header">
+                        <span class="ticket__icon">💻</span>
+                        <h3 class="ticket__name">ONLINE</h3>
+                        <div class="ticket__price">
+                            <span class="ticket__amount">3 000</span>
+                            <span class="ticket__currency">грн</span>
+                        </div>
+                    </div>
+                    <ul class="ticket__features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Доступ до онлайн-трансляції події
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Доступ до матеріалів конференції
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Можливість перегляду записів виступів
+                        </li>
+                    </ul>
+                    <a href="#form" class="btn btn--outline btn--block select-package-btn" data-package="online">Обрати пакет</a>
+                </div>
+
+                <!-- Package B -->
+                <div class="ticket ticket--popular">
+                    <div class="ticket__badge">Популярний</div>
+                    <div class="ticket__header">
+                        <span class="ticket__icon">🎟</span>
+                        <h3 class="ticket__name">STANDARD</h3>
+                        <div class="ticket__price">
+                            <span class="ticket__amount">11 000</span>
+                            <span class="ticket__currency">грн</span>
+                        </div>
+                    </div>
+                    <ul class="ticket__features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Відвідування форуму та доступ до всіх виступів
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Тренінгова програма другого дня
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Кава-брейки протягом двох днів
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Нетворкінг та бізнес-знайомства
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Індивідуальні зустрічі зі спікерами
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Закритий Telegram-канал спільноти
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Іменний бейдж
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Онлайн-матеріали конференції
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Професійний фотозвіт з події
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Знижки на проживання
+                        </li>
+                    </ul>
+                    <a href="#form" class="btn btn--primary btn--block select-package-btn" data-package="standard">Обрати пакет</a>
+                </div>
+
+                <!-- VIP Package -->
+                <div class="ticket ticket--vip">
+                    <div class="ticket__badge ticket__badge--vip">VIP</div>
+                    <div class="ticket__header">
+                        <span class="ticket__icon">👑</span>
+                        <h3 class="ticket__name">VIP</h3>
+                        <div class="ticket__price">
+                            <span class="ticket__amount">20 000</span>
+                            <span class="ticket__currency">грн</span>
+                        </div>
+                    </div>
+                    <ul class="ticket__features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <strong>Проживання 2 ночі у Radisson Blu Resort</strong>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            SPA-центр та сніданки включено
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <strong>Закрита нетворкінг-вечеря</strong>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Q&A-сесії зі спікерами
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Запис лекцій після події
+                        </li>
+                        <li class="ticket__features-divider">
+                            + Усе, що входить до пакету Standard
+                        </li>
+                    </ul>
+                    <a href="#form" class="btn btn--primary btn--block select-package-btn" data-package="vip">Обрати пакет</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Часті питання</h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Як проходить реєстрація на форум?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Після оплати квитка ви отримаєте підтвердження на email. У день форуму пройдіть реєстрацію на ресепшені та отримайте іменний бейдж.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Чи можна повернути квиток?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Так, повернення можливе за 14 днів до початку форуму. Детальніше — у Публічній оферті.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Чи буде харчування на форумі?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Так, для всіх офлайн-учасників передбачені кава-брейки. VIP-пакет включає сніданки в готелі.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Чи можна перейти на інший пакет після покупки?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Так, ви можете апгрейднути свій пакет, доплативши різницю. Зверніться до нашого менеджера.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">
+                        <span>Як отримати доступ до онлайн-трансляції?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Посилання на трансляцію буде надіслано на вашу електронну пошту за день до початку форуму.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="form-section" id="form">
+        <div class="form-section__bg">
+            <div class="form-section__gradient"></div>
+            <div class="form-section__particles" id="particles"></div>
+        </div>
+        <div class="container">
+            <div class="form-section__wrapper">
+                <div class="form-section__info" data-aos="fade-right">
+                    <span class="section-tag">Реєстрація</span>
+                    <h2 class="section-title">Долучайтесь до<br><span class="text-gradient">ОСВІТЯНИ 2050</span></h2>
+                    <p class="form-section__desc">Забронюйте своє місце на форумі вже зараз. Кількість місць обмежена.</p>
+
+                    <div class="form-section__benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-item__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <span>2 дні насиченої програми</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-item__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <span>20+ топових спікерів</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-item__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <span>Нетворкінг з колегами</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-item__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <span>Практичні інструменти</span>
+                        </div>
+                    </div>
+
+                    <div class="form-section__location">
+                        <div class="location-card">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop" alt="Radisson Blu Resort Bukovel">
+                            <div class="location-card__content">
+                                <h4>Radisson Blu Resort</h4>
+                                <p>Буковель, Карпати</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section__form" data-aos="fade-left">
+                    <form class="registration-form" id="registrationForm">
+                        <div class="form-group">
+                            <label for="name">Ім'я та прізвище *</label>
+                            <input type="text" id="name" name="name" required placeholder="Введіть ваше ім'я">
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Телефон *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+380 (__) ___-__-__">
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Організація / Школа</label>
+                            <input type="text" id="organization" name="organization" placeholder="Назва закладу">
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Оберіть пакет участі *</label>
+                            <div class="package-selector" id="packageSelector">
+                                <label class="package-option">
+                                    <input type="radio" name="package" value="online">
+                                    <div class="package-option__content">
+                                        <span class="package-option__name">ONLINE</span>
+                                        <span class="package-option__price">3 000 грн</span>
+                                    </div>
+                                </label>
+                                <label class="package-option package-option--popular">
+                                    <input type="radio" name="package" value="standard">
+                                    <div class="package-option__content">
+                                        <span class="package-option__badge">Популярний</span>
+                                        <span class="package-option__name">STANDARD</span>
+                                        <span class="package-option__price">11 000 грн</span>
+                                    </div>
+                                </label>
+                                <label class="package-option package-option--vip">
+                                    <input type="radio" name="package" value="vip">
+                                    <div class="package-option__content">
+                                        <span class="package-option__badge">VIP</span>
+                                        <span class="package-option__name">VIP</span>
+                                        <span class="package-option__price">20 000 грн</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="package-error-message" id="packageError">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                                Обов'язково оберіть пакет участі!
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment">Коментар (необов'язково)</label>
+                            <textarea id="comment" name="comment" rows="3" placeholder="Ваші побажання або питання"></textarea>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--large btn--block btn--submit">
+                            <span class="btn__text">Забронювати місце</span>
+                            <span class="btn__loader">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" stroke-dasharray="60" stroke-dashoffset="20"></circle>
+                                </svg>
+                            </span>
+                        </button>
+
+                        <p class="form-note">* Обов'язкові поля. Після відправки форми з вами зв'яжеться наш менеджер.</p>
+                    </form>
+
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success__icon">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="16 10 11 15 8 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Дякуємо за реєстрацію!</h3>
+                        <p>Ми надіслали підтвердження на вашу електронну пошту. Наш менеджер зв'яжеться з вами найближчим часом.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <div class="cta__icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h2>Готові трансформувати освіту?</h2>
+                <p>Приєднуйтесь до форуму та станьте частиною спільноти інноваційних педагогів</p>
+                <div class="cta__buttons">
+                    <a href="#tickets" class="btn btn--primary btn--large btn--glow">Обрати квиток</a>
+                    <a href="#form" class="btn btn--outline btn--large">Зареєструватись</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <a href="#" class="logo">ОСВІТЯНИ<span>2050</span></a>
+                    <p>Освітній форум для педагогів у соціальних медіа</p>
+                    <div class="footer__social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>Навігація</h4>
+                        <a href="#about">Про подію</a>
+                        <a href="#program">Програма</a>
+                        <a href="#speakers">Спікери</a>
+                        <a href="#tickets">Квитки</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Контакти</h4>
+                        <a href="mailto:info@example.com">info@example.com</a>
+                        <a href="tel:+380000000000">+38 (000) 000-00-00</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Документи</h4>
+                        <a href="#">Політика конфіденційності</a>
+                        <a href="#">Публічна оферта</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Освітяни 2050. Усі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Style Customizer Panel -->
+    <button class="style-customizer-toggle" id="styleCustomizerToggle" aria-label="Налаштування стилю">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+    </button>
+
+    <div class="style-customizer-overlay" id="styleCustomizerOverlay"></div>
+
+    <aside class="style-customizer" id="styleCustomizer">
+        <div class="style-customizer__header">
+            <h3 class="style-customizer__title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+                Стиль сторінки
+            </h3>
+            <button class="style-customizer__close" id="styleCustomizerClose" aria-label="Закрити">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="style-customizer__content">
+            <div class="style-customizer__section">
+                <h4 class="style-customizer__section-title">Готові теми</h4>
+                <div class="style-customizer__presets" id="themePresets">
+                    <button class="preset-btn active" data-preset="default">
+                        <div class="preset-btn__colors">
+                            <span class="preset-btn__color" style="background: #050505;"></span>
+                            <span class="preset-btn__color" style="background: #11DBAC;"></span>
+                            <span class="preset-btn__color" style="background: #ffffff;"></span>
+                        </div>
+                        <span class="preset-btn__name">За замовчуванням</span>
+                    </button>
+                    <button class="preset-btn" data-preset="ocean">
+                        <div class="preset-btn__colors">
+                            <span class="preset-btn__color" style="background: #0a192f;"></span>
+                            <span class="preset-btn__color" style="background: #64ffda;"></span>
+                            <span class="preset-btn__color" style="background: #e6f1ff;"></span>
+                        </div>
+                        <span class="preset-btn__name">Океан</span>
+                    </button>
+                    <button class="preset-btn" data-preset="sunset">
+                        <div class="preset-btn__colors">
+                            <span class="preset-btn__color" style="background: #1a1a2e;"></span>
+                            <span class="preset-btn__color" style="background: #ff6b6b;"></span>
+                            <span class="preset-btn__color" style="background: #ffeaa7;"></span>
+                        </div>
+                        <span class="preset-btn__name">Захід сонця</span>
+                    </button>
+                    <button class="preset-btn" data-preset="forest">
+                        <div class="preset-btn__colors">
+                            <span class="preset-btn__color" style="background: #0d1f0d;"></span>
+                            <span class="preset-btn__color" style="background: #2ecc71;"></span>
+                            <span class="preset-btn__color" style="background: #ecf0f1;"></span>
+                        </div>
+                        <span class="preset-btn__name">Ліс</span>
+                    </button>
+                    <button class="preset-btn" data-preset="purple">
+                        <div class="preset-btn__colors">
+                            <span class="preset-btn__color" style="background: #0f0f1a;"></span>
+                            <span class="preset-btn__color" style="background: #a855f7;"></span>
+                            <span class="preset-btn__color" style="background: #f3e8ff;"></span>
+                        </div>
+                        <span class="preset-btn__name">Фіолетовий</span>
+                    </button>
+                    <button class="preset-btn" data-preset="light">
+                        <div class="preset-btn__colors">
+                            <span class="preset-btn__color" style="background: #ffffff;"></span>
+                            <span class="preset-btn__color" style="background: #0ea5e9;"></span>
+                            <span class="preset-btn__color" style="background: #1e293b;"></span>
+                        </div>
+                        <span class="preset-btn__name">Світла</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="style-customizer__section">
+                <h4 class="style-customizer__section-title">Кольори фону</h4>
+                <div class="color-picker-group">
+                    <div class="color-picker-item">
+                        <span class="color-picker-item__label">Основний фон</span>
+                        <div class="color-picker-item__input-wrapper">
+                            <div class="color-picker-item__preview" style="background: var(--color-bg);">
+                                <input type="color" class="color-picker-item__input" data-var="--color-bg" value="#050505">
+                            </div>
+                            <input type="text" class="color-picker-item__hex" data-var="--color-bg" value="#050505" maxlength="7">
+                        </div>
+                    </div>
+                    <div class="color-picker-item">
+                        <span class="color-picker-item__label">Фон секцій</span>
+                        <div class="color-picker-item__input-wrapper">
+                            <div class="color-picker-item__preview" style="background: var(--color-bg-light);">
+                                <input type="color" class="color-picker-item__input" data-var="--color-bg-light" value="#0a0a0a">
+                            </div>
+                            <input type="text" class="color-picker-item__hex" data-var="--color-bg-light" value="#0a0a0a" maxlength="7">
+                        </div>
+                    </div>
+                    <div class="color-picker-item">
+                        <span class="color-picker-item__label">Фон карток</span>
+                        <div class="color-picker-item__input-wrapper">
+                            <div class="color-picker-item__preview" style="background: var(--color-bg-card);">
+                                <input type="color" class="color-picker-item__input" data-var="--color-bg-card" value="#111111">
+                            </div>
+                            <input type="text" class="color-picker-item__hex" data-var="--color-bg-card" value="#111111" maxlength="7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-customizer__section">
+                <h4 class="style-customizer__section-title">Кольори тексту</h4>
+                <div class="color-picker-group">
+                    <div class="color-picker-item">
+                        <span class="color-picker-item__label">Основний текст</span>
+                        <div class="color-picker-item__input-wrapper">
+                            <div class="color-picker-item__preview" style="background: var(--color-text);">
+                                <input type="color" class="color-picker-item__input" data-var="--color-text" value="#ffffff">
+                            </div>
+                            <input type="text" class="color-picker-item__hex" data-var="--color-text" value="#ffffff" maxlength="7">
+                        </div>
+                    </div>
+                    <div class="color-picker-item">
+                        <span class="color-picker-item__label">Приглушений текст</span>
+                        <div class="color-picker-item__input-wrapper">
+                            <div class="color-picker-item__preview" style="background: var(--color-text-muted);">
+                                <input type="color" class="color-picker-item__input" data-var="--color-text-muted" value="#888888">
+                            </div>
+                            <input type="text" class="color-picker-item__hex" data-var="--color-text-muted" value="#888888" maxlength="7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-customizer__section">
+                <h4 class="style-customizer__section-title">Акцентний колір</h4>
+                <div class="color-picker-group">
+                    <div class="color-picker-item">
+                        <span class="color-picker-item__label">Головний акцент</span>
+                        <div class="color-picker-item__input-wrapper">
+                            <div class="color-picker-item__preview" style="background: var(--color-accent);">
+                                <input type="color" class="color-picker-item__input" data-var="--color-accent" value="#11DBAC">
+                            </div>
+                            <input type="text" class="color-picker-item__hex" data-var="--color-accent" value="#11DBAC" maxlength="7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-customizer__section">
+                <h4 class="style-customizer__section-title">Кольори рамок</h4>
+                <div class="color-picker-group">
+                    <div class="color-picker-item">
+                        <span class="color-picker-item__label">Основна рамка</span>
+                        <div class="color-picker-item__input-wrapper">
+                            <div class="color-picker-item__preview" style="background: var(--color-border);">
+                                <input type="color" class="color-picker-item__input" data-var="--color-border" value="#1a1a1a">
+                            </div>
+                            <input type="text" class="color-picker-item__hex" data-var="--color-border" value="#1a1a1a" maxlength="7">
+                        </div>
+                    </div>
+                    <div class="color-picker-item">
+                        <span class="color-picker-item__label">Світла рамка</span>
+                        <div class="color-picker-item__input-wrapper">
+                            <div class="color-picker-item__preview" style="background: var(--color-border-light);">
+                                <input type="color" class="color-picker-item__input" data-var="--color-border-light" value="#2a2a2a">
+                            </div>
+                            <input type="text" class="color-picker-item__hex" data-var="--color-border-light" value="#2a2a2a" maxlength="7">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-customizer__actions">
+                <div class="style-customizer__saved-indicator" id="savedIndicator">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Збережено автоматично
+                </div>
+                <button class="style-customizer__btn style-customizer__btn--reset" id="resetStyles">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                        <path d="M3 3v5h5"></path>
+                    </svg>
+                    Скинути до стандартних
+                </button>
+                <button class="style-customizer__btn style-customizer__btn--export" id="exportStyles">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Експортувати CSS
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <script src="main.js"></script>
+</body>
+</html>
