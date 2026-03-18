@@ -570,6 +570,14 @@ console.log('Script loaded successfully. Timer should be running.');
             '--color-text-muted': '#64748b',
             '--color-primary': '#8b4a3c',
             '--color-secondary': '#c27a6a'
+        },
+        'education': {
+            '--color-bg': '#fefefe',
+            '--color-bg-light': '#f0f4f8',
+            '--color-text': '#2d3748',
+            '--color-text-muted': '#718096',
+            '--color-primary': '#3182ce',
+            '--color-secondary': '#63b3ed'
         }
     };
 
