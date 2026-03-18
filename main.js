@@ -658,7 +658,16 @@ console.log('Script loaded successfully. Timer should be running.');
     // Load from localStorage
     function loadFromLocalStorage() {
         var saved = localStorage.getItem(STORAGE_KEY);
-        if (!saved) return;
+
+        // If no saved styles, apply default preset and sync inputs
+        if (!saved) {
+            // Apply default colors to ensure consistency
+            Object.keys(defaultColors).forEach(function(varName) {
+                applyColor(varName, defaultColors[varName]);
+                updateInputs(varName, defaultColors[varName]);
+            });
+            return;
+        }
 
         try {
             var styles = JSON.parse(saved);
