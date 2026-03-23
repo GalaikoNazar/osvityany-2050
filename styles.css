@@ -1,4 +1,4 @@
-/* ==========================================
+﻿/* ==========================================
    CREATIVE V2 - Navy Blue / Terracotta Theme
    Fonts: Sora + Plus Jakarta Sans
    ========================================== */
@@ -2071,337 +2071,67 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================
-   Style Customizer Panel (Fixed colors - not affected by theme)
+   Style Selector
    ========================================== */
-.style-customizer-toggle {
+.style-selector {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 9998;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-    transition: all 0.3s ease;
-}
-
-.style-customizer-toggle:hover {
-    transform: scale(1.1) rotate(90deg);
-    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
-}
-
-.style-customizer-toggle svg {
-    width: 24px;
-    height: 24px;
-    color: #fff;
-}
-
-.style-customizer {
-    position: fixed;
-    top: 0;
-    right: -400px;
-    width: 380px;
-    max-width: 90vw;
-    height: 100vh;
-    background: #1a1a2e;
-    border-left: 1px solid rgba(99, 102, 241, 0.3);
+    bottom: 20px;
+    right: 20px;
     z-index: 9999;
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow-y: auto;
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
-}
-
-.style-customizer.active {
-    right: 0;
-}
-
-.style-customizer__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px;
-    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-    position: sticky;
-    top: 0;
-    background: #1a1a2e;
-    z-index: 1;
-}
-
-.style-customizer__title {
-    font-family: var(--font-heading), 'Sora', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: #ffffff;
-}
-
-.style-customizer__title svg {
-    color: #8b5cf6;
-}
-
-.style-customizer__close {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #a0a0a0;
-    transition: all 0.3s ease;
-}
-
-.style-customizer__close:hover {
-    background: rgba(239, 68, 68, 0.1);
-    border-color: rgba(239, 68, 68, 0.3);
-    color: #ef4444;
-}
-
-.style-customizer__content {
-    padding: 24px;
-}
-
-.style-customizer__section {
-    margin-bottom: 32px;
-}
-
-.style-customizer__section-title {
-    font-family: var(--font-heading), 'Sora', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #a0a0a0;
-    margin-bottom: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 12px 16px;
+    background: rgba(10, 22, 40, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.style-customizer__section-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
+.style-selector__label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 4px;
+}
+
+.style-selector__link {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.style-selector__link:hover {
+    color: #fff;
     background: rgba(255, 255, 255, 0.1);
 }
 
-.color-picker-group {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.style-selector__link.active {
+    color: #fff;
+    background: var(--color-primary);
 }
 
-.color-picker-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
+@media (max-width: 768px) {
+    .style-selector {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 16px;
+        padding: 10px;
+    }
 
-.color-picker-item:hover {
-    border-color: rgba(139, 92, 246, 0.5);
-    background: rgba(139, 92, 246, 0.05);
-}
-
-.color-picker-item__label {
-    font-size: 14px;
-    font-weight: 500;
-    color: #ffffff;
-}
-
-.color-picker-item__input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.color-picker-item__preview {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.color-picker-item__preview:hover {
-    transform: scale(1.1);
-    border-color: #8b5cf6;
-}
-
-.color-picker-item__input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.color-picker-item__hex {
-    width: 80px;
-    padding: 8px 12px;
-    background: #0f0f1a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: #ffffff;
-    font-family: var(--font-heading), 'Sora', sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.color-picker-item__hex:focus {
-    outline: none;
-    border-color: #8b5cf6;
-}
-
-.style-customizer__presets {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-bottom: 24px;
-}
-
-.preset-btn {
-    padding: 16px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.preset-btn:hover {
-    border-color: #8b5cf6;
-    transform: translateY(-2px);
-}
-
-.preset-btn.active {
-    border-color: #8b5cf6;
-    background: rgba(139, 92, 246, 0.15);
-}
-
-.preset-btn__colors {
-    display: flex;
-    gap: 4px;
-}
-
-.preset-btn__color {
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.preset-btn__name {
-    font-size: 12px;
-    font-weight: 500;
-    color: #ffffff;
-}
-
-.style-customizer__actions {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.style-customizer__btn {
-    padding: 14px 20px;
-    border-radius: 10px;
-    font-family: var(--font-heading), 'Sora', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.style-customizer__btn--reset {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #a0a0a0;
-}
-
-.style-customizer__btn--reset:hover {
-    border-color: rgba(239, 68, 68, 0.5);
-    color: #ef4444;
-    background: rgba(239, 68, 68, 0.05);
-}
-
-.style-customizer__btn--export {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #a0a0a0;
-}
-
-.style-customizer__btn--export:hover {
-    border-color: #8b5cf6;
-    color: #8b5cf6;
-    background: rgba(139, 92, 246, 0.05);
-}
-
-.style-customizer__saved-indicator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px;
-    background: rgba(34, 197, 94, 0.1);
-    border: 1px solid rgba(34, 197, 94, 0.2);
-    border-radius: 10px;
-    color: #22c55e;
-    font-size: 13px;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-}
-
-.style-customizer__saved-indicator.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.style-customizer-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: 9998;
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--transition);
-}
-
-.style-customizer-overlay.active {
-    opacity: 1;
-    visibility: visible;
+    .style-selector__label {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6px;
+    }
 }
