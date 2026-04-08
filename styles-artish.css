@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header.scrolled {
-    background: rgba(255, 252, 242, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
     padding: 10px 0;
     border-bottom: 1px solid rgba(9, 42, 216, 0.1);
@@ -407,9 +407,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero__subtitle {
     font-size: clamp(16px, 2.5vw, 20px);
-    color: var(--color-text-muted);
+    color: #1a1a1a;
     margin-bottom: 28px;
-    font-weight: 400;
+    font-weight: 500;
+    text-shadow: 0 0 20px rgba(255, 252, 242, 0.9), 0 0 40px rgba(255, 252, 242, 0.7);
 }
 
 .hero__meta {
@@ -418,9 +419,10 @@ h1, h2, h3, h4, h5, h6 {
     gap: 20px;
     padding: 14px 24px;
     margin-bottom: 28px;
-    background: #fff;
+    background: rgba(255, 252, 242, 0.85);
     border: 1px solid rgba(9, 42, 216, 0.12);
     border-radius: 60px;
+    backdrop-filter: blur(8px);
 }
 
 .hero__meta-item {
@@ -1268,7 +1270,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-group textarea {
     width: 100%;
     padding: 14px 18px;
-    background: var(--color-bg);
+    background: #ffffff;
     border: 1.5px solid rgba(9, 42, 216, 0.12);
     border-radius: 5px;
     clip-path: none;
@@ -1558,7 +1560,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
     padding: 60px 0 24px;
     border-top: 2px solid rgba(9, 42, 216, 0.08);
-    background: var(--color-bg);
+    background: #ffffff;
 }
 
 .footer__main {
