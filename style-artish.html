@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Педагоги в соціальних медіа | Освітній форум 2026</title>
+    <meta name="description" content="Сертифікаційна програма з підвищення кваліфікації освітян. Буковель, Radisson Blu Resort. 9-10 травня 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-artish.css">
+</head>
+<body>
+    <!-- Animated Background (hidden in this theme) -->
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="bg-orbs">
+            <div class="orb orb--1"></div>
+            <div class="orb orb--2"></div>
+            <div class="orb orb--3"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./img/logo-artish.png" alt="Педагоги в соціальних медіа" class="logo__img">
+                <span class="logo__text">ПЕДАГОГИ<span>2026</span></span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#about" class="nav__link">Про подію</a>
+                <a href="#program" class="nav__link">Програма</a>
+                <a href="#training" class="nav__link">Тренінги</a>
+                <a href="#tickets" class="nav__link">Квитки</a>
+                <a href="#faq" class="nav__link">FAQ</a>
+            </nav>
+            <div class="header__actions">
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__bg">
+            <img src="./img/hotel-radisson.png" alt="Radisson Blu Resort Bukovel" class="hero__bg-image">
+            <div class="hero__bg-overlay"></div>
+            <div class="hero__bg-grid"></div>
+            <div class="hero__bg-scanlines"></div>
+        </div>
+        <div class="hero__content">
+            <div class="container">
+                <div class="hero__badge glass">
+                    <span class="pulse"></span>
+                    <span>Освітній форум 2026</span>
+                </div>
+
+                <h1 class="hero__title">
+                    <span class="hero__title-line">
+                        <span class="text-gradient-animated">ПЕДАГОГИ</span>
+                    </span>
+                    <span class="hero__title-line">
+                        <span class="hero__subtitle-text">в соціальних медіа</span>
+                    </span>
+                </h1>
+
+                <p class="hero__subtitle">Сертифікаційна програма з підвищення кваліфікації освітян</p>
+
+                <div class="hero__meta glass">
+                    <div class="hero__meta-item">
+                        <div class="hero__meta-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <span>9-10 травня 2026</span>
+                    </div>
+                    <div class="hero__meta-divider"></div>
+                    <div class="hero__meta-item">
+                        <div class="hero__meta-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <span>Буковель, Radisson Blu Resort</span>
+                    </div>
+                </div>
+
+                <div class="hero__tags">
+                    <span class="tag glass">Практичні інструменти</span>
+                    <span class="tag glass">Нетворкінг</span>
+                    <span class="tag glass">AI-рішення</span>
+                </div>
+
+                <div class="hero__buttons">
+                    <a href="#form" class="btn btn--primary btn--large btn--glow">
+                        <span>Забронювати місце</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn btn--glass btn--large">
+                        <span>Дізнатись більше</span>
+                    </a>
+                </div>
+
+                <div class="hero__buttons hero__buttons--secondary">
+                    <a href="#form" class="btn btn--glass" data-hide-package="true" data-form-type="speaker">
+                        <span>Стати доповідачем</span>
+                    </a>
+                    <a href="#form" class="btn btn--glass" data-hide-package="true" data-form-type="partner">
+                        <span>Запропонувати партнерство</span>
+                    </a>
+                </div>
+
+                <div class="hero__countdown">
+                    <p class="hero__countdown-label">До початку:</p>
+                    <div class="countdown">
+                        <div class="countdown__item glass">
+                            <span class="countdown__number" id="days">00</span>
+                            <span class="countdown__label">днів</span>
+                        </div>
+                        <div class="countdown__separator">:</div>
+                        <div class="countdown__item glass">
+                            <span class="countdown__number" id="hours">00</span>
+                            <span class="countdown__label">годин</span>
+                        </div>
+                        <div class="countdown__separator">:</div>
+                        <div class="countdown__item glass">
+                            <span class="countdown__number" id="minutes">00</span>
+                            <span class="countdown__label">хвилин</span>
+                        </div>
+                        <div class="countdown__separator">:</div>
+                        <div class="countdown__item glass">
+                            <span class="countdown__number" id="seconds">00</span>
+                            <span class="countdown__label">секунд</span>
+                        </div>
+                    </div>
+                    <script>
+                    var countdownEnd = new Date("May 9, 2026 09:00:00").getTime();
+                    function updateCountdown(){
+                        var now = new Date().getTime();
+                        var t = countdownEnd - now;
+                        if(t < 0) t = 0;
+                        var d = Math.floor(t / 86400000);
+                        var h = Math.floor((t % 86400000) / 3600000);
+                        var m = Math.floor((t % 3600000) / 60000);
+                        var s = Math.floor((t % 60000) / 1000);
+                        document.getElementById("days").innerHTML = (d < 10 ? "0" : "") + d;
+                        document.getElementById("hours").innerHTML = (h < 10 ? "0" : "") + h;
+                        document.getElementById("minutes").innerHTML = (m < 10 ? "0" : "") + m;
+                        document.getElementById("seconds").innerHTML = (s < 10 ? "0" : "") + s;
+                    }
+                    updateCountdown();
+                    setInterval(updateCountdown, 1000);
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="hero__card hero__card--1 glass">
+                <img src="./img/hotel-conference.png" alt="">
+            </div>
+            <div class="hero__card hero__card--2 glass">
+                <img src="./img/hotel-lobby.png" alt="">
+            </div>
+        </div>
+
+        <div class="hero__scroll">
+            <div class="hero__scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stats__item glass">
+                    <span class="stats__number" data-count="2">0</span>
+                    <span class="stats__label">дні форуму</span>
+                </div>
+                <div class="stats__item glass">
+                    <span class="stats__number" data-count="100">0</span>
+                    <span class="stats__suffix">+</span>
+                    <span class="stats__label">активних освітян-лідерів</span>
+                </div>
+                <div class="stats__item glass">
+                    <span class="stats__number" data-count="10">0</span>
+                    <span class="stats__suffix">+</span>
+                    <span class="stats__label">доповідачів</span>
+                </div>
+                <div class="stats__item glass">
+                    <span class="stats__number" data-count="5">0</span>
+                    <span class="stats__suffix">+</span>
+                    <span class="stats__label">тренінгових програм</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Про подію</span>
+                <h2 class="section-title"><span class="text-gradient">Педагоги в соціальних медіа</span></h2>
+            </div>
+            <div class="about__grid about__grid--centered">
+                <div class="about__text glass" style="text-align: center;">
+                    <p>Метою форуму є створення простору для практичного навчання, обміну досвідом і натхнення, де педагоги отримують сучасні інструменти — від AI-рішень до стратегій розвитку в соцмережах — щоб ефективно комунікувати, навчати та масштабувати свій вплив у цифровому середовищі.</p>
+                    <p>Учасники заходу матимуть можливість не лише ознайомитися з актуальними тенденціями розвитку освітнього контенту, а й опанувати конкретні навички створення, просування та монетизації власних освітніх продуктів.</p>
+                </div>
+                <div class="about__features">
+                    <div class="feature glass">
+                        <div class="feature__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <div class="feature__content">
+                            <h3>Практичні інструменти</h3>
+                            <p>Від AI-рішень до стратегій розвитку в соцмережах</p>
+                        </div>
+                    </div>
+                    <div class="feature glass">
+                        <div class="feature__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="feature__content">
+                            <h3>Нетворкінг</h3>
+                            <p>Знайомства з професійною спільнотою освітян</p>
+                        </div>
+                    </div>
+                    <div class="feature glass">
+                        <div class="feature__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <div class="feature__content">
+                            <h3>Експертиза доповідачів</h3>
+                            <p>Досвід найкращих експертів галузі</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="program" id="program">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Програма</span>
+                <h2 class="section-title">2 дні <span class="text-gradient">насиченої програми</span></h2>
+            </div>
+            <div class="program__tabs">
+                <button class="program__tab active" data-day="1">
+                    <span class="program__tab-day">День 1</span>
+                    <span class="program__tab-date">9 травня</span>
+                </button>
+                <button class="program__tab" data-day="2">
+                    <span class="program__tab-day">День 2</span>
+                    <span class="program__tab-date">10 травня</span>
+                </button>
+            </div>
+            <div class="program__content">
+                <div class="program__day active" data-day="1">
+                    <div class="program__timeline">
+                        <div class="program__item glass">
+                            <div class="program__time">09:00</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Реєстрація учасників</h3>
+                                <p>Прибуття гостей, отримання матеріалів форуму</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">09:30</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Офіційне відкриття форуму</h3>
+                                <p>Вітальні слова організаторів та презентація місії події</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">09:45</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Ключові виступи</h3>
+                                <p>Досвід і практики від лідерів думок</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">11:00</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Кава-перерва</h3>
+                                <p>Нетворкінг та можливість забронювати зустріч із доповідачами</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">11:45</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Виступи</h3>
+                                <p>Продовження експертних виступів</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">13:30</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Обід</h3>
+                                <p>Перерва на обід</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">14:30</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Панельна дискусія</h3>
+                                <p>Публічна розмова з експертами. Можливість ставити запитання із залу</p>
+                            </div>
+                        </div>
+                        <div class="program__item program__item--vip glass">
+                            <div class="program__time">20:00</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Закрита нетворкінг-вечеря</h3>
+                                <p>Вечір знайомств, ідей і партнерств у камерній атмосфері</p>
+                                <span class="program__badge">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="program__day" data-day="2">
+                    <div class="program__timeline">
+                        <div class="program__item glass">
+                            <div class="program__time">09:00</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Тренінгова програма</h3>
+                                <p>Практичні тренінги та майстер-класи</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">11:00</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Кава-перерва</h3>
+                                <p>Нетворкінг та можливість забронювати зустріч із доповідачами</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">11:45</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Тренінгова програма</h3>
+                                <p>Продовження практичних тренінгів і майстер-класів</p>
+                            </div>
+                        </div>
+                        <div class="program__item glass">
+                            <div class="program__time">15:00</div>
+                            <div class="program__dot"></div>
+                            <div class="program__info">
+                                <h3>Закриття форуму</h3>
+                                <p>Підбиття підсумків та нагородження учасників</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Program Section -->
+    <section class="training" id="training">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Тренінги</span>
+                <h2 class="section-title"><span class="text-gradient">Тренінгова</span> програма</h2>
+            </div>
+            <div class="training__grid">
+                <div class="training__item glass">
+                    <div class="training__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="5"></circle>
+                            <path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"></path>
+                        </svg>
+                    </div>
+                    <h3>ОСОБИСТИЙ БРЕНД</h3>
+                    <p>Педагога як експерта та лідера думок у своїй галузі</p>
+                </div>
+                <div class="training__item glass">
+                    <div class="training__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>МОНЕТИЗАЦІЯ</h3>
+                    <p>Цифрова компетентність педагогів у сфері створення, просування та монетизації освітнього контенту</p>
+                </div>
+                <div class="training__item glass">
+                    <div class="training__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
+                    <h3>АЛГОРИТМИ СОЦМЕРЕЖ</h3>
+                    <p>Стратегії росту у 2026 р. (Instagram, Facebook, YouTube, TikTok, LinkedIn) для освітніх цілей</p>
+                </div>
+                <div class="training__item glass">
+                    <div class="training__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                            <path d="M12 2a10 10 0 0 1 10 10"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>AI-ІНСТРУМЕНТИ</h3>
+                    <p>Gamma, Beautiful.ai, NotebookLM, Descript та інші інструменти для педагогів</p>
+                </div>
+                <div class="training__item glass">
+                    <div class="training__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>СТОРІТЕЛІНГ</h3>
+                    <p>Навички публічних виступів, сторітелінгу та самопрезентації</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section class="tickets" id="tickets">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Квитки</span>
+                <h2 class="section-title">Оберіть <span class="text-gradient">пакет участі</span></h2>
+            </div>
+            <div class="tickets__grid">
+                <div class="ticket ticket--premium glass">
+                    <div class="ticket__badge ticket__badge--premium">Premium</div>
+                    <div class="ticket__header">
+                        <span class="ticket__icon">👑</span>
+                        <h3 class="ticket__name">PREMIUM</h3>
+                        <div class="ticket__price">
+                            <span class="ticket__amount">20 000</span>
+                            <span class="ticket__currency">грн</span>
+                        </div>
+                    </div>
+                    <ul class="ticket__features">
+                        <li><span class="check"></span><strong>Проживання 2 ночі у готелі Radisson Blu Resort</strong></li>
+                        <li><span class="check"></span>SPA-центр та сніданки у вартості</li>
+                        <li><span class="check"></span><strong>Участь у закритій нетворкінг-вечері</strong></li>
+                        <li><span class="check"></span>Доступ до Telegram-чату з Q&A-сесіями</li>
+                        <li><span class="check"></span>Запис лекцій після події</li>
+                        <li class="ticket__divider">+ Усе з пакету Standard</li>
+                    </ul>
+                    <a href="#form" class="btn btn--primary btn--block btn--glow select-package-btn" data-package="premium">Обрати</a>
+                </div>
+
+                <div class="ticket ticket--popular glass">
+                    <div class="ticket__badge">Популярний</div>
+                    <div class="ticket__header">
+                        <span class="ticket__icon">🎟</span>
+                        <h3 class="ticket__name">STANDARD</h3>
+                        <div class="ticket__price">
+                            <span class="ticket__amount">11 000</span>
+                            <span class="ticket__currency">грн</span>
+                        </div>
+                    </div>
+                    <ul class="ticket__features">
+                        <li><span class="check"></span>Відвідування форуму та всі виступи</li>
+                        <li><span class="check"></span>Тренінгова програма другого дня</li>
+                        <li><span class="check"></span>Кава-брейки протягом двох днів</li>
+                        <li><span class="check"></span>Нетворкінг та бізнес-знайомства</li>
+                        <li><span class="check"></span>Індивідуальні зустрічі з доповідачами</li>
+                        <li><span class="check"></span>Telegram-канал спільноти</li>
+                        <li><span class="check"></span>Іменний бейдж</li>
+                        <li><span class="check"></span>Онлайн-матеріали конференції</li>
+                        <li><span class="check"></span>Професійний фотозвіт</li>
+                        <li><span class="check"></span>Знижки на проживання</li>
+                    </ul>
+                    <a href="#form" class="btn btn--primary btn--block btn--glow select-package-btn" data-package="standard">Обрати</a>
+                </div>
+
+                <div class="ticket glass">
+                    <div class="ticket__header">
+                        <span class="ticket__icon">💻</span>
+                        <h3 class="ticket__name">ONLINE</h3>
+                        <div class="ticket__price">
+                            <span class="ticket__amount">3 000</span>
+                            <span class="ticket__currency">грн</span>
+                        </div>
+                    </div>
+                    <ul class="ticket__features">
+                        <li><span class="check"></span>Доступ до онлайн-трансляції події</li>
+                        <li><span class="check"></span>Доступ до матеріалів конференції</li>
+                        <li><span class="check"></span>Можливість перегляду записів виступів</li>
+                        <li><span class="check"></span>Telegram-канал спільноти учасників</li>
+                    </ul>
+                    <a href="#form" class="btn btn--glass btn--block select-package-btn" data-package="online">Обрати</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Часті <span class="text-gradient">питання</span></h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq__item glass">
+                    <button class="faq__question">
+                        <span>Для кого цей форум?</span>
+                        <div class="faq__icon"><span></span><span></span></div>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Подія створена для педагогів, освітян, керівників навчальних закладів, освітніх блогерів та тих, хто хоче розвивати свій бренд у сфері освіти.</p>
+                    </div>
+                </div>
+                <div class="faq__item glass">
+                    <button class="faq__question">
+                        <span>Як зареєструватися на форум?</span>
+                        <div class="faq__icon"><span></span><span></span></div>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Щоб взяти участь, потрібно заповнити форму реєстрації на сайті та обрати відповідний пакет участі.</p>
+                    </div>
+                </div>
+                <div class="faq__item glass">
+                    <button class="faq__question">
+                        <span>Які доступні способи оплати?</span>
+                        <div class="faq__icon"><span></span><span></span></div>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Оплатити участь у форумі можна онлайн банківською карткою під час реєстрації на сайті. Після успішної оплати учасник отримує підтвердження реєстрації на електронну пошту. За потреби можлива оплата за рахунком.</p>
+                    </div>
+                </div>
+                <div class="faq__item glass">
+                    <button class="faq__question">
+                        <span>Чи можна придбати квиток тільки на один день?</span>
+                        <div class="faq__icon"><span></span><span></span></div>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Ні, участь передбачає повну програму на два дні, щоб забезпечити інтегроване навчання та доступ до тренінгів.</p>
+                    </div>
+                </div>
+                <div class="faq__item glass">
+                    <button class="faq__question">
+                        <span>Що робити, якщо потрібно скасувати участь?</span>
+                        <div class="faq__icon"><span></span><span></span></div>
+                    </button>
+                    <div class="faq__answer">
+                        <p>У разі необхідності скасування або зміни даних учасника слід зв'язатися з організаторами. Умови повернення коштів залежать від обраного пакета та термінів.</p>
+                    </div>
+                </div>
+                <div class="faq__item glass">
+                    <button class="faq__question">
+                        <span>Чи потрібно бронювати проживання окремо?</span>
+                        <div class="faq__icon"><span></span><span></span></div>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Для учасників пакета Premium проживання вже включено. Учасники пакета Standard можуть самостійно забронювати номер у Radisson Blu Resort Bukovel або в інших готелях курорту Буковель.</p>
+                    </div>
+                </div>
+                <div class="faq__item glass">
+                    <button class="faq__question">
+                        <span>Чи можна приєднатися до форуму як партнер?</span>
+                        <div class="faq__icon"><span></span><span></span></div>
+                    </button>
+                    <div class="faq__answer">
+                        <p>Так, є можливість співпраці та партнерства. Для деталей зверніться до організаторів.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <div class="form-section__wrapper">
+                <div class="form-section__info">
+                    <span class="section-tag">Реєстрація</span>
+                    <h2 class="section-title">Долучайтесь до<br><span class="text-gradient-animated">Педагоги в соціальних медіа</span></h2>
+                    <p class="form-section__desc">Кількість місць обмежена.</p>
+
+                    <div class="form-section__benefits">
+                        <div class="benefit glass">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>2 дні програми</span>
+                        </div>
+                        <div class="benefit glass">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>10+ доповідачів</span>
+                        </div>
+                        <div class="benefit glass">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Нетворкінг</span>
+                        </div>
+                    </div>
+
+                    <div class="form-section__location glass">
+                        <img src="img/hotel-radisson.png" alt="Radisson Blu Resort Bukovel">
+                        <div class="form-section__location-info">
+                            <h4>Radisson Blu Resort, Bukovel</h4>
+                            <p>Сучасний 5-зірковий готель, розташований в самому серці гірськолижного курорту Буковель серед мальовничих Карпат. До послуг гостей: спа-центр, критий басейн, сауна та тренажерний зал. Ідеальне місце для поєднання навчання та відпочинку в горах.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section__form glass">
+                    <form class="registration-form" id="registrationForm">
+                        <div class="form-group">
+                            <label for="name">Ім'я та прізвище *</label>
+                            <input type="text" id="name" name="name" required placeholder="Ваше ім'я">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+380">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Організація</label>
+                            <input type="text" id="organization" name="organization" placeholder="Назва закладу">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Пакет участі *</label>
+                            <div class="package-selector" id="packageSelector">
+                                <label class="package-option">
+                                    <input type="radio" name="package" value="premium">
+                                    <div class="package-option__content">
+                                        <span class="package-option__badge package-option__badge--premium">Premium</span>
+                                        <span class="package-option__name">PREMIUM</span>
+                                        <span class="package-option__price">20 000 грн</span>
+                                    </div>
+                                </label>
+                                <label class="package-option">
+                                    <input type="radio" name="package" value="standard">
+                                    <div class="package-option__content">
+                                        <span class="package-option__badge">Популярний</span>
+                                        <span class="package-option__name">STANDARD</span>
+                                        <span class="package-option__price">11 000 грн</span>
+                                    </div>
+                                </label>
+                                <label class="package-option">
+                                    <input type="radio" name="package" value="online">
+                                    <div class="package-option__content">
+                                        <span class="package-option__name">ONLINE</span>
+                                        <span class="package-option__price">3 000 грн</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="package-error" id="packageError">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                                Оберіть пакет
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment">Коментар</label>
+                            <textarea id="comment" name="comment" rows="2" placeholder="Побажання"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--large btn--block btn--glow btn--submit">
+                            <span class="btn__text">Забронювати місце</span>
+                            <span class="btn__loader"></span>
+                        </button>
+                    </form>
+
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="16 10 11 15 8 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Дякуємо!</h3>
+                        <p>Підтвердження надіслано на пошту.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <a href="#" class="logo">
+                        <img src="./img/logo-artish.png" alt="Педагоги в соціальних медіа" class="logo__img">
+                    </a>
+                    <p>Педагоги в соціальних медіа</p>
+                    <div class="footer__social">
+                        <a href="https://www.instagram.com/e.s.m.forum" target="_blank" class="social-link glass">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>Навігація</h4>
+                        <a href="#about">Про подію</a>
+                        <a href="#program">Програма</a>
+                        <a href="#training">Тренінги</a>
+                        <a href="#tickets">Квитки</a>
+                    </div>
+                    <div class="footer__column">
+                        <h4>Контакти</h4>
+                        <a href="mailto:office@iiasc.org">office@iiasc.org</a>
+                        <a href="tel:+380674055511">+380 (67) 405 55 11</a>
+                        <a href="https://www.instagram.com/e.s.m.forum" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Педагоги в соціальних медіа</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Style Selector -->
+    <div class="style-selector">
+        <span class="style-selector__label">Варіанти стилю:</span>
+        <a href="index.html" class="style-selector__link">Темна</a>
+        <a href="style-olive.html" class="style-selector__link">Оливкова</a>
+        <a href="style-warm.html" class="style-selector__link">Тепла</a>
+        <a href="style-forest.html" class="style-selector__link">Лісова</a>
+        <a href="style-elegant.html" class="style-selector__link">Елегантна</a>
+        <a href="style-artish.html" class="style-selector__link active">Артиш</a>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
